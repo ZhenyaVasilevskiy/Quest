@@ -1,0 +1,63 @@
+.finquest-modal-container,
+.hint-modal-container,
+.congratulation-modal-container {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, -40px);
+    transition: all $transition-duration ease;
+    position: fixed;
+    background-color: transparent;
+    top: 10rem;
+    left: 13.9rem;
+    right: 0;
+    bottom: 0;
+    // padding: 3rem;
+    padding-top: 1rem;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    z-index: 201;
+    @media (max-width: $sw-lg-max) {
+        top: 8rem;
+        left: 12rem;
+    }
+    @media (max-width: $sw-md-max) {
+        padding: 1.5rem 1rem;
+        left: 11rem;
+    }
+    @media (max-width: $sw-sm-max) {
+        left: 0;
+    }
+    @media (max-width: $sw-xs-max) {
+        top: 13.7rem;
+    }
+    &.active {
+        transform: translate(0, 0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.finquest-modal-container {
+    z-index: 201;
+}
+
+.hint-modal-container {
+    z-index: 211;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.congratulation-modal-container {
+    z-index: 211;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(#959bee, 0.8);
+}

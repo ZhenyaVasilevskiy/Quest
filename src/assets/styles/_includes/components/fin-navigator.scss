@@ -1,0 +1,18 @@
+.section-fin-navigator {
+    // border: 1px solid red;
+
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    min-height: calc(100vh - 10vh);
+    width: 100%;
+    @media (max-width: $sw-lg-max) {
+        min-height: calc(100vh - 10vh);
+    }
+    @media (max-width: $sw-md-max) {
+        width: calc(100% - 11rem);
+    }
+    @media (max-width: $sw-xs-max) {
+        min-height: calc(100vh - 10vh);
+    }
+}

@@ -1,0 +1,69 @@
+
+$white: #fff;
+$black: #000;
+$solitude: #EBF8FF;
+$green: #3dc479;
+$bluewood: #324B59;
+$violet: #7f84ea;
+$rockblue: #a3c1d1;
+$blue: #7fc4ea;
+$red: #fa4848;
+
+$body-bg:       $solitude;
+$body-color:    $black;
+ 
+
+$transition_duration: 0.3s;
+
+$link-decoration:       none;
+$link-hover-decoration: none;
+
+$product-sans: 'product-sans', sans-serif;
+
+$headings-font-family: $product-sans;
+
+$font-size-base: 1.4rem; 
+
+$line-height-base: 1.4;
+
+$sizes: (
+ 25: 25%,
+ 50: 50%,
+ 75: 75%,
+ 100: 100%
+);
+
+$link-color:            blue;
+$link-decoration:       none;
+$link-hover-color:      $black;
+$link-hover-decoration: none;
+
+
+$sw-xx-min:0;
+$sw-xs-min:320px;
+$sw-sm-min:768px;
+$sw-md-min:1100px;
+$sw-lg-min:1440px;
+$sw-xl-min:1700px;
+
+$sw-xs-max:$sw-sm-min - 1px;
+$sw-sm-max:$sw-md-min - 1px;
+$sw-md-max:$sw-lg-min - 1px;
+$sw-lg-max:$sw-xl-min - 1px;
+
+$grid-breakpoints: (
+ xs: $sw-xs-min,
+ sm: $sw-sm-min,
+ md: $sw-md-min,
+ lg: $sw-lg-min,
+ xl: $sw-xl-min
+);
+
+$grid-columns:                24 !default;
+$grid-gutter-width:           30px !default;
+$grid-row-columns:            6 !default;
+
+$font-family-sans-serif: $product-sans;
+$font-family-serif:      $product-sans;
+$font-family-monospace:  $product-sans;
+$font-family-base:       $font-family-sans-serif;

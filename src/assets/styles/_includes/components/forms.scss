@@ -1,0 +1,289 @@
+.checkbox-item {
+    display: flex;
+    margin-bottom: 2rem;
+    @media (max-width: $sw-lg-max) {
+        margin-bottom: 1.4rem;
+    }
+    cursor: pointer;
+    &__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        left: -9999em;
+        right: -9999em;
+        &:checked {
+            & + .checkbox-item__box {
+                background-color: $green;
+                .icon-tick {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__box {
+        width: 3.2rem;
+        height: 3.2rem;
+        background-color: #cae3f1;
+        border-radius: 3px;
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 8px;
+        margin-right: 3.5rem;
+        @media (max-width: $sw-lg-max) {
+            width: 2.4rem;
+            height: 2.4rem;
+            margin-right: 2rem;
+            margin-top: 4px;
+        }
+        @media (max-width: $sw-md-max) {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1.5rem;
+        }
+        .icon-tick {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 1.2rem;
+            color: $white;
+            @media (max-width: $sw-lg-max) {
+                font-size: 1rem;
+            }
+        }
+    }
+    &__txt {
+        color: $bluewood;
+        font-size: 1.8rem;
+        line-height: 1.66;
+        @media (max-width: $sw-lg-max) {
+            font-size: 1.6rem;
+            line-height: 1.6;
+        }
+        @media (max-width: $sw-md-max) {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.checkbox--disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.finquest-form {
+    flex-direction: column;
+    align-items: flex-start;
+    &__input-group {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 10px 0;
+        &-wrap {
+            margin-bottom: 3.3rem;
+            @media (max-width: $sw-lg-max) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+    &__select-group {
+        margin-bottom: 3.3rem;
+        &--inline {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            .finquest-form__select-group__title {
+                width: auto;
+                // margin-right: 2rem;
+                margin-bottom: 0;
+            }
+            // .v-select {
+            //     margin: 0 2rem;
+            //     @media (max-width: $sw-lg-max) {
+            //         margin: 0 1.2rem;
+            //     }
+            // }
+        }
+        &__title {
+            color: $bluewood;
+            line-height: 1.35;
+            font-size: 1.8rem;
+            display: block;
+            width: 100%;
+            margin-bottom: 1.6rem;
+            @media (max-width: $sw-lg-max) {
+                font-size: 1.5rem;
+            }
+        }
+        // .v-select {
+        //     width: 21.5rem;
+        //     @media (max-width: $sw-lg-max) {
+        //         width: 20rem;
+        //         margin-bottom: 1rem;
+        //     }
+        //     &--sm {
+        //         width: 11.5rem;
+        //         @media (max-width: $sw-lg-max) {
+        //             width: 10rem;
+        //         }
+        //     }
+        // }
+        // .vs--searchable .vs__dropdown-toggle {
+        //     height: 5.5rem;
+        //     @media (max-width: $sw-lg-max) {
+        //         height: 5rem;
+        //     }
+        // }
+        // .vs__clear {
+        //     display: none;
+        // }
+        // .vs__search {
+        //     margin: 0;
+        //     @include placeholder {
+        //         font-family: $product-sans;
+        //         font-weight: 400;
+        //         color: $bluewood;
+        //         font-size: 1.8rem;
+        //         @media (max-width: $sw-lg-max) {
+        //             font-size: 1.6rem;
+        //         }
+        //     }
+        // }
+        // .vs__dropdown-menu {
+        //     box-shadow: 0 11px 24px #d9ecf8;
+        //     border: none;
+        //     max-height: 200px;
+        //     padding: 0;
+        //     width: auto;
+        //     max-width: 400px;
+        //     li {
+        //         height: auto;
+        //         min-height: 5.5rem;
+        //         background-color: $white;
+        //         font-size: 1.8rem;
+        //         color: $bluewood;
+        //         display: flex;
+        //         border-radius: 5px;
+        //         align-items: center;
+        //         width: 100%;
+        //         transition: background-color .3s ease;
+        //         @media (max-width: $sw-lg-max) {
+        //             height: auto;
+        //             min-height: 5rem;
+        //             font-size: 1.6rem;
+        //         }
+        //         &:hover {
+        //             @media (min-width: $sw-sm-min) {
+        //                 background-color: lighten($green, 30%);
+        //             }
+        //         }
+        //         &.vs__dropdown-option--selected {
+        //             background-color: $green !important;
+        //             color: #ffffff;
+        //         }
+        //     }
+        // }
+        // .vs__selected {
+        //     color: $bluewood;
+        //     font-size: 1.8rem;
+        //     line-height: 1.65;
+        //     margin: 0;
+        //     width: 100%;
+        //     display: block;
+        //     white-space: nowrap;
+        //     text-overflow: ellipsis;
+        //     overflow: hidden;
+        //     @media (max-width: $sw-lg-max) {
+        //         font-size: 1.6rem;
+        //     }
+        // }
+        // .vs__selected-options {
+        //     width: 100%;
+        // }
+        // .vs__actions {
+        //     padding: 0;
+        //     &:after {
+        //         content: '';
+        //         display: block;
+        //         width: 10px;
+        //         height: 6px;
+        //         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGBAMAAAAI3hL1AAAAAXNSR0IB2cksfwAAADBQTFRFAAAAPcR6PsR4VapVPcR5PcR5PMR5PcN5PcV5PcR5AP8APcN5PsR4K9WAPcR6PcR5QjveegAAABB0Uk5TAMGhA6D/paevpAGesgaXsbR2UZgAAAAtSURBVHicYxAyYGB2ZFBNZjALZ7CIXLX1LAPv0XcxFxgY7oSeZWBg4P1/gQEAp7kLH4k7opAAAAAASUVORK5CYII=')
+        //         ;
+        //         background-size: contain;
+        //         background-position: center;
+        //     }
+        // }
+        // .vs__open-indicator {
+        //     display: none;
+        // }
+        // .v-select .vs__dropdown-toggle {
+        //     box-sizing: border-box;
+        //     background-color: #ebf8ff;
+        //     border-radius: 5px;
+        //     border: none;
+        //     width: 21.5rem;
+        //     padding: 15px 20px 15px 13px;
+        //     transition: all .3s ease;
+        //     height: 5.5rem;
+        //     line-height: 1;
+        //     @media (max-width: $sw-lg-max) {
+        //         width: 20rem;
+        //         height: 5rem;
+        //     }
+        // }
+        // .vue-select--sm {
+        //     .vs__dropdown-toggle {
+        //         box-sizing: border-box;
+        //         background-color: #ebf8ff;
+        //         border-radius: 5px;
+        //         border: none;
+        //         width: 11.5rem;
+        //         padding: 15px 20px 15px 13px;
+        //         transition: all .3s ease;
+        //         height: 5.5rem;
+        //         line-height: 1;
+        //         @media (max-width: $sw-lg-max) {
+        //             width: 10rem;
+        //             height: 5rem;
+        //         }
+        //     }
+        //     .vs__dropdown-menu {
+        //         min-width: auto;
+        //         width: 11.5rem;
+        //         @media (max-width: $sw-lg-max) {
+        //             width: 10rem;
+        //         }
+        //     }
+        // }
+    }
+}
+
+.form-control {
+    background-color: #dceffa;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: none;
+    color: $bluewood;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 400;
+    &:focus {
+        background-color: #dceffa;
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.form-control-sm {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 3px;
+    text-align: center;
+}
+
+.form-error-message {
+    color: red;
+}

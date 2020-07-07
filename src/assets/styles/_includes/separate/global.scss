@@ -1,0 +1,195 @@
+.l-wrapper {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    // outline: 1px solid red;
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-width: $sw-sm-min) {
+        max-width: 750px;
+    }
+    @media (min-width: $sw-md-min) {
+        max-width: 1100px;
+    }
+}
+
+.main-wrapper {
+    display: flex;
+    position: relative;
+    z-index: 15;
+}
+
+.main-content {
+    // width: 100%;
+    // padding: 5.5rem 8rem;
+    // width: calc(100% - 13.9rem);
+    margin-left: 13.9rem;
+    // margin-top: 10rem;
+    position: relative;
+    // min-height: calc(100vh - 10vh);
+    // position: fixed;
+    // bottom: 0;
+    margin-top: 10vh;
+    @media (max-width: $sw-lg-max) {
+        // margin-top: 8rem;
+        // margin-top: 0;
+        margin-left: 12rem;
+        width: calc(100% - 10vh);
+        min-height: calc(100vh - 10vh);
+        height: calc(100vh - 10vh);
+    }
+    @media (max-width: $sw-md-max) {
+        margin-left: 11rem;
+        width: calc(100% - 11rem);
+    }
+    @media (max-width: $sw-sm-max) {
+        width: 100%;
+        margin-left: 0;
+    }
+    @media (max-width: $sw-xs-max) {
+        margin-top: 13.7rem;
+        min-height: calc(100vh - 10vh);
+    }
+}
+
+.h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: $bluewood;
+    @media (max-width: $sw-lg-max) {
+        font-size: 3rem;
+    }
+    @media (max-width: $sw-md-max) {
+        font-size: 2.6rem;
+    }
+    @media (max-width: $sw-xs-max) {
+        font-size: 2.4rem;
+    }
+}
+.h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: $bluewood;
+    @media (max-width: $sw-lg-max) {
+        font-size: 1.5rem;
+    }
+    @media (max-width: $sw-md-max) {
+        font-size: 1.5rem;
+    }
+}
+.h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: $bluewood;
+}
+.h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $bluewood;
+}
+.h5 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $bluewood;
+}
+.h6 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $bluewood;
+}
+
+p {
+    color: $bluewood;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.66;
+    @media (max-width: $sw-lg-max) {
+        font-size: 1.3rem;
+    }
+    @media (max-width: $sw-md-max) {
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+}
+
+.section {
+    padding: 5.5rem 8rem;
+    @media (max-width: $sw-lg-max) {
+        padding: 3rem 5rem;
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.15s ease-in;
+}
+
+.fade-enter,
+.fade-leave-active {
+    opacity: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.pdf-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    &:hover {
+        @media (min-width: $sw-sm-min) {
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+    .icon-pdf {
+        font-size: 2rem;
+        margin-right: 1.5rem;
+        color: $green;
+    }
+    span {
+        color: $green;
+        font-size: 1.8rem;
+        line-height: 1;
+    }
+}
+
+// dog
+.map-dog {
+    position: absolute;
+    transition: top 1.5s ease 0.3s, left 1.5s ease 0.3s, transform 0.4s ease, opacity 0.4s ease;
+    z-index: 10;
+    transform: scale(0);
+    opacity: 0;
+    &.is-visible {
+        opacity: 1;
+        transform: scale(1);
+    }
+    &.in-move {
+        animation: dog-move 0.5s linear infinite;
+    }
+}
+
+@keyframes dog-move {
+    0% {
+        transform: rotate3d(1, 1, 1, 0deg);
+    }
+    50% {
+        transform: rotate3d(1, 1, 2, 20deg);
+    }
+    100% {
+        transform: rotate3d(1, 1, 1, 0deg);
+    }
+}

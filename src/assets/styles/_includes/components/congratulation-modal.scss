@@ -1,0 +1,101 @@
+.congratulation-modal {
+    &-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: $sw-md-max) {
+            align-items: flex-start;
+        }
+        @media (max-width: $sw-sm-max) {
+            justify-content: center;
+            padding-top: 2rem;
+            padding-left: 0;
+        }
+    }
+    &-box {
+        width: 41.1rem;
+        height: auto;
+        background-color: $white;
+        padding: 6.2rem 6rem 5rem 6rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        @media (max-width: $sw-sm-max) {
+            width: 100%;
+            max-width: 40rem;
+            padding: 4rem;
+        }
+        &--error {
+            width: auto;
+            background-color: #fff;
+            padding: 7rem 5rem 5rem 5rem;
+            p {
+                color: $red;
+            }
+        }
+        &--lg-img {
+            padding: 6.2rem 0 0 0;
+            .congratulation-modal-box__body {
+                padding-left: 6rem;
+                padding-right: 6rem;
+            }
+        }
+        .h2 {
+            margin-bottom: 1.7rem;
+        }
+        p {
+            margin-bottom: 1.7rem;
+        }
+        &__rang {
+            min-width: 22.4rem;
+            padding: 1.5rem 1rem;
+            margin-bottom: 3.4rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            font-weight: 700;
+            color: $white;
+            &.rang--green {
+                background-color: $green;
+            }
+            &.rang--blue {
+                background-color: #59c3c2;
+            }
+            &.rang--violet {
+                background-color: #6a57c7;
+            }
+            &.rang--curious-blue {
+                background-color: #3181d1;
+            }
+        }
+        &__image {
+            position: relative;
+        }
+        &__place-name {
+            position: absolute;
+            color: $white;
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 1;
+            bottom: 50px;
+            z-index: 10;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &__close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            padding: 0;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

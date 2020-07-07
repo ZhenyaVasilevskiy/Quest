@@ -1,0 +1,83 @@
+button {
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    box-shadow: none;
+    border-radius: 6px;
+    font-weight: 700;
+    color: $white !important;
+    transition: background-color 0.3s ease;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    &--violet {
+        background-color: $violet;
+    }
+    &--red {
+        background-color: $red !important;
+    }
+    &--green {
+        background-color: $green !important;
+        &:hover {
+            @media (min-width: $sw-sm-min) {
+                background-color: darken($green, 5%);
+            }
+        }
+        &:active {
+            background-color: darken($green, 10%);
+        }
+    }
+    &--disabled {
+        background-color: $solitude;
+        cursor: not-allowed;
+    }
+    &--xs {
+        font-size: 1.8rem;
+        min-width: 18.6rem;
+        height: 5rem;
+    }
+    &--sm {
+        font-size: 2.4rem;
+        min-width: 18.6rem;
+        height: 5rem;
+        @media (max-width: $sw-lg-max) {
+            font-size: 2rem;
+        }
+        @media (max-width: $sw-md-max) {
+            min-width: 16rem;
+            height: 4rem;
+            font-size: 1.7rem;
+        }
+    }
+    &--md {
+        min-width: 23.4rem;
+        height: 6.5rem;
+        font-size: 2rem;
+        @media (max-width: $sw-lg-max) {
+            font-size: 1.8rem;
+            min-width: 22rem;
+            height: 6rem;
+        }
+        @media (max-width: $sw-md-max) {
+            font-size: 1.7rem;
+            height: 5rem;
+            min-width: 18rem;
+        }
+    }
+}
